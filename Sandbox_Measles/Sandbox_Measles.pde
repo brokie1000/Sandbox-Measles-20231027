@@ -1,6 +1,7 @@
 //Global Variables
 int appWidth, appHeight;
 float faceX, faceY, faceDiameter;
+float backgroundX, backgroundY, backgroundWidth, backgroundHeight;
   //
   void setup() {
   size( 600, 400); //fullScreen;
@@ -14,10 +15,10 @@ float faceX, faceY, faceDiameter;
   faceX = appWidth*1/2;
   faceY = appHeight*1/2;
   faceDiameter = smallerDimension;
-  backgroundX = ;
-  backgroundY = ;
-  backgroundWidth = ;
-  backgroundHeight = ;
+  backgroundX = faceX - faceDiameter*1/2;
+  backgroundY = faceY - faceDiameter*1/2;
+  backgroundWidth = faceDiameter;
+  backgroundHeight = faceDiameter;
   //
   //DIVs
   //

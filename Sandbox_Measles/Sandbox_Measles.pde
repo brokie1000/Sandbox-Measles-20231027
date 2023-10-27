@@ -13,14 +13,18 @@ float faceX, faceY, faceDiameter;
   //Population
   faceX = appWidth*1/2;
   faceY = appHeight*1/2;
-  //faceDiameter = ;
   faceDiameter = smallerDimension;
+  backgroundX = ;
+  backgroundY = ;
+  backgroundWidth = ;
+  backgroundHeight = ;
   //
   //DIVs
   //
 } //End setup
 //
 void draw() {
+  rect( backgroundX, backgroundY, backgroundWidth, backgroundHeight ); //Circle ONLY
   ellipse( faceX, faceY, faceDiameter, faceDiameter );
 } //End draw
 //

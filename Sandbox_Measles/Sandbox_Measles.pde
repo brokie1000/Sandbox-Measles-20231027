@@ -13,7 +13,7 @@ void setup() {
   appHeight = height; //displayHeight
   //Ternary Operator
   int smallerDimension = (appWidth >= appHeight) ? appHeight : appWidth;
-  println("Smaller Dimension is", smallerDimension);
+  println("Smaller Dimension is", smallerDimension); //
   //
   //Population
   faceX = appWidth*1/2;
@@ -38,11 +38,12 @@ void setup() {
   mouthY1 = backgroundY+smallerDimension*3/4;
   mouthX2 = noseX3;
   mouthY2 = mouthY1;
-  mouthOpen = smallerDimension*1/4;
+  mouthOpen = smallerDimension*1/6;
   mouthReset = smallerDimension/smallerDimension; //1=reset
-  measleX = random(); 
-  measleY = random(); 
-  measleDiameter = random();
+  measleX = random( 0, appWidth ); 
+  measleY = random( 0, appHeight ); 
+  measleDiameter = random( smallerDimension*1/100, smallerDimension*1/30 );
+  ellipse ( measleX, measleY, measleDiameter, measleDiameter ); 
   //
   //DIVs
   ellipse( faceX, faceY, faceDiameter, faceDiameter );

@@ -39,7 +39,7 @@ void setup() {
   mouthY1 = backgroundY+smallerDimension*3/4;
   mouthX2 = noseX3;
   mouthY2 = mouthY1;
-  mouthOpen = smallerDimension*1/4;
+  mouthOpen = smallerDimension*1/6;
   mouthReset = smallerDimension/smallerDimension; //1=reset
   //
   //DIVs

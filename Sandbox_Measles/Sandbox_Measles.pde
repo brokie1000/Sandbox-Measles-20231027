@@ -8,7 +8,7 @@ float mouthX1, mouthY1, mouthX2, mouthY2, mouthOpen, mouthReset;
 float measleX, measleY, measleDiameter;
 //
 void setup() {
-  size( 600, 400); //fullScreen;
+  size( 700, 500); //fullScreen;
   appWidth = width; //displayWidth
   appHeight = height; //displayHeight
   //Ternary Operator
@@ -40,9 +40,9 @@ void setup() {
   mouthY2 = mouthY1;
   mouthOpen = smallerDimension*1/4;
   mouthReset = smallerDimension/smallerDimension; //1=reset
-  measleX = ; 
-  measleY = ; 
-  measleDiameter = ;
+  measleX = random(); 
+  measleY = random(); 
+  measleDiameter = random();
   //
   //DIVs
   ellipse( faceX, faceY, faceDiameter, faceDiameter );

@@ -43,7 +43,8 @@ void setup() {
   mouthReset = smallerDimension/smallerDimension; //1=reset
   //
   //DIVs
-  ellipse( faceX, faceY, faceDiameter, faceDiameter );
+   ellipse( faceX, faceY, faceDiameter, faceDiameter );
+   rect( backgroundX, backgroundY, smallerDimension/2-sqrt(sq(smallerDimension/2)/2), smallerDimension/2-sqrt(sq(smallerDimension/2)/2) );
   //4 Inscribed buttons on the background square not on the circle
   //Solve Isolceles leg length to find rect() width and height
   //2x^2 = radius^2
@@ -67,7 +68,9 @@ void draw() {
   measleX = random( 0, appWidth );
   measleY = random( 0, appHeight );
   measleDiameter = random( smallerDimension*1/100, smallerDimension*1/30 );
+  noStroke();
   ellipse( measleX, measleY, measleDiameter, measleDiameter );
+  stroke(1); //default is 1
   fill(resetColour);
 } //End draw
 //

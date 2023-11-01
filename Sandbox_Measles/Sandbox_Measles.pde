@@ -43,11 +43,12 @@ void setup() {
   mouthReset = smallerDimension/smallerDimension; //1=reset
   //
   //DIVs
-   rect( backgroundX, backgroundY, smallerDimension/2-sqrt(sq(smallerDimension/2)/2), smallerDimension/2-sqrt(sq(smallerDimension/2)/2) );
-   ellipse( faceX, faceY, faceDiameter, faceDiameter );
+  rect( backgroundX, backgroundY, smallerDimension/2-sqrt(sq(smallerDimension/2)/2), smallerDimension/2-sqrt(sq(smallerDimension/2)/2) );
+  ellipse( faceX, faceY, faceDiameter, faceDiameter );
   //4 Inscribed buttons on the background square not on the circle
   //Solve Isolceles leg length to find rect() width and height
   //2x^2 = radius^2
+  rect( backgroundX, backgroundY, smallerDimension/2-sqrt(sq(smallerDimension/2)/2), smallerDimension/2-sqrt(sq(smallerDimension/2)/2) );
   println(backgroundX, smallerDimension, smallerDimension/2, sq( smallerDimension/2 ), sq( smallerDimension/2 ) /2, sqrt( sq( smallerDimension/2 ) /2 ), smallerDimension/2-sqrt(sq(smallerDimension/2)/2) );
   //
 } //End setup

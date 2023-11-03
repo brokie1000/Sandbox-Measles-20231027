@@ -6,6 +6,7 @@ float leftEyeX, leftEyeY, rightEyeX, rightEyeY, eyeDimater;
 float noseX1, noseY1, noseX2, noseY2, noseX3, noseY3;
 float mouthX1, mouthY1, mouthX2, mouthY2, mouthOpen, mouthReset;
 float measleX, measleY, measleDiameter;
+float button1X, button1Y, buttonSide, buttonSide; 
 color resetColour=#FFFFFF;
 //
 void setup() {
@@ -48,7 +49,10 @@ void setup() {
   //4 Inscribed buttons on the background square not on the circle
   //Solve Isolceles leg length to find rect() width and height
   //2x^2 = radius^2
-  rect( backgroundX, backgroundY, smallerDimension/2-sqrt(sq(smallerDimension/2)/2), smallerDimension/2-sqrt(sq(smallerDimension/2)/2) );
+  button1X = backgroundX;
+  button1Y = backgroundY;
+  buttonSide = smallerDimension/2-sqrt(sq(smallerDimension/2)/2);
+  rect( button1X, button1Y, buttonSide, buttonSide );
   println(backgroundX, smallerDimension, smallerDimension/2, sq( smallerDimension/2 ), sq( smallerDimension/2 ) /2, sqrt( sq( smallerDimension/2 ) /2 ), smallerDimension/2-sqrt(sq(smallerDimension/2)/2) );
   //
 } //End setup
@@ -62,11 +66,15 @@ void draw() {
   strokeWeight(mouthReset); //1=reset
   //
     color measleColour = color( 255, random(0,84), random(0, 103) );
-  fill(measleColour);
-  measleX = random( backgroundX, backgroundX+backgroundWidth );
-  measleY = random( backgroundY, backgroundY+backgroundHeight );
-  measleDiameter = random( smallerDimension*1/100, smallerDimension*1/30 );
-  noStroke();
+    fill(measleColour);
+    measleDiameter = random( smallerDimension*1/100, smallerDimension*1/30 );
+
+  measleX = random( backgroundX+(measleDiameter/2), (backgroundX+backgroundWidth)-(measleDiameter/2) );
+  
+  measleY = random( backgroundY+(measleDiameter/2), (backgroundY+backgroundHeight)-(measleDiameter/2) );
+  
+  
+  noStroke();  
   ellipse( measleX, measleY, measleDiameter, measleDiameter );
   stroke(1); //default is 1
   fill(resetColour);

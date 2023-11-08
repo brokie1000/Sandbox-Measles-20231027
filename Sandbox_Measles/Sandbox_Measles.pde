@@ -126,8 +126,10 @@ void draw() {
   }
   //WHILE only works for BUTTON1, must be repeated for other buttons
   noStroke();
-  if ( measlesON==true ) ellipse( measleX, measleY, measleDiameter, measleDiameter );
-  //ERROR: need to redraw program start for measles to disappear
+  if ( ((measleX-faceX)*(measleX-faceX))+((measleY-faceY)*(measleY-faceY)) < sq( ((faceDiameter/2)-(measleDiameter/2)) ) ) { //Measle on Circle
+      if ( measlesON==true ) ellipse( measleX, measleY, measleDiameter, measleDiameter );
+    //ERROR: need to redraw program start for measles to disappear
+  } // End Measle on Circle
   stroke(1); //default is 1
   fill(resetColour);
 } //End draw

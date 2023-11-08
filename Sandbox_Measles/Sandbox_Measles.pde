@@ -20,7 +20,7 @@ PFont buttonFont;
 Boolean measlesON=false;
 //
 void setup() {
-  size( 600, 400 ); //fullScreen;
+  size( 800, 600 ); //fullScreen;
   appWidth = width; //displayWidth
   appHeight = height; //displayHeight
   //Ternary Operator
@@ -50,7 +50,7 @@ void setup() {
   mouthY1 = backgroundY+smallerDimension*3/4;
   mouthX2 = noseX3;
   mouthY2 = mouthY1;
-  mouthOpen = smallerDimension*1/4;
+  mouthOpen = smallerDimension*1/5;
   mouthReset = smallerDimension/smallerDimension; //1=reset
   buttonFont = createFont("Harrington", 55);
   //

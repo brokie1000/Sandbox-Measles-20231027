@@ -132,6 +132,8 @@ void draw() {
   } // End Measle on Circle
   stroke(1); //default is 1
   fill(resetColour);
+  if ( splashScreen==false ) background(0);
+  if ( splashScreen==true ) mealsesProgram();
 } //End draw
 //
 void keyPressed() {
@@ -141,6 +143,8 @@ void keyPressed() {
 } //End keyPressed
 //
 void mousePressed() {
+  splashScreen=true;
+  //
   if ( mouseX>button1X && mouseX<button1X+buttonSide && mouseY>button1Y && mouseY<button1Y+buttonSide ) measlesON=true; //START
   if ( mouseX>button2X && mouseX<button2X+buttonSide && mouseY>button2Y && mouseY<button2Y+buttonSide ) measlesON=false; //STOP
   if ( mouseX>button3X && mouseX<button3X+buttonSide && mouseY>button3Y && mouseY<button3Y+buttonSide ) exit(); //QUIT
